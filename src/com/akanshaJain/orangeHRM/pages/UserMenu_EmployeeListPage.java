@@ -19,4 +19,15 @@ public class UserMenu_EmployeeListPage extends PreDefinedActions {
 		WebElement listOfSearchUsers = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table[@id='employeeListTable']/tbody/tr[1]/td[3]")));
 		return listOfSearchUsers.getText();
 	}
+	
+	public UserMenu_EmployeeListPage getDefaultRowCountAtEndOfPage() {
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebElement defaultRowCountDropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@class='select-dropdown']")));
+		defaultRowCountDropdown.getText();
+		return this;
+	}
+	
+	public int getNoOfRowsAsPerDefaultCount() {
+		return driver.findElements(By.xpath("//table[@id='employeeListTable']/tbody/tr")).size();
+	}
 }
