@@ -12,7 +12,7 @@ public class PreDefinedActions {
 	protected static WebDriver driver;
 	
 	public static void start(String url) {
-		System.setProperty("webdriver.chrome.driver", "//Users//punchh_akansha//Downloads//chromedriver");
+		System.setProperty("webdriver.chrome.driver", ".//resources//chromedriver");
 		System.out.println("STEP - Open Chrome Browser");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -22,12 +22,12 @@ public class PreDefinedActions {
 	}
 	
 	public static void start() {
-		System.setProperty("webdriver.chrome.driver", "./resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", ".//resources//chromedriver");
 		System.out.println("STEP - Open Chrome Browser");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		System.out.println("STEP - Enter url");
-		driver.get("https://automationaj06-trials72.orangehrmlive.com/auth/login");
+		driver.get("https://automationaj06-trials72.orangehrmlive.com/");
 		driver.manage().window().maximize();
 	}
 	
