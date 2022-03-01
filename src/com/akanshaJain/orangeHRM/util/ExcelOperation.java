@@ -1,4 +1,4 @@
-package com.akanshaJain.orangeHRM.testScripts;
+package com.akanshaJain.orangeHRM.util;
 
 import java.io.File;
 import java.io.FileInputStream;
